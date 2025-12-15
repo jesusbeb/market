@@ -3,6 +3,7 @@ package com.jbeb.market.persistence.entity;
 import jakarta.persistence.*;
 
 import java.time.LocalDateTime;
+import java.util.List;
 
 @Entity
 @Table(name = "compras")
@@ -25,6 +26,15 @@ public class Compra {
 
     private String estado;
 
+    // MUCHAS compras puede tener UN cliente
+    // id_cliente es la llave foranea hacia Cliente
+    @ManyToOne
+    @JoinColumn(name = "id_cliente", insertable = false, updatable = false)
+    private Cliente cliente;
+
+    // List tiene los Productos de una Compra
+    @OneToMany(mappedBy = "producto")
+    private List<ComprasProducto> productos;
 
     // Getters & Setters
 

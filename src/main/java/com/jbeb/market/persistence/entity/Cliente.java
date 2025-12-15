@@ -1,9 +1,8 @@
 package com.jbeb.market.persistence.entity;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
+
+import java.util.List;
 
 @Entity
 @Table(name = "clientes")
@@ -23,6 +22,10 @@ public class Cliente {
     @Column(name = "correo_electronico")
     private String correoElectronico;
 
+    // UN cliente puede tener MUCHAS compras
+    // La relacion esta mapeada por el atributo cliente que esta dentro de la clase Compra
+    @OneToMany(mappedBy = "cliente")
+    List<Compra> compras;
 
     // Getters & Setters
 

@@ -29,6 +29,16 @@ public class Producto {
 
     private boolean estado;
 
+    // MUCHOS productos pueden existir en UNA categoria. Pero un producto solo puede tener una categoria
+    // La anotacion se coloca desde la perspectiva de la clase donde esta declarada
+    // No podria ser OneToOne porque signifcaria que un producto pertenece a una categoria y esa categoria pertenece unicamente a ese producto
+    // @JoinColumn para especificar el nombre del atributo que sirve como llave foranea hacia Categoria
+    // A traves de este atributo no se puede insertar ni actualizar una categoria, sirve solo para
+    // saber a que categoria pertenece un producto
+    @ManyToOne
+    @JoinColumn(name = "id_categoria", insertable = false, updatable = false)
+    private Categoria categoria;
+
 
     // Getters & Setters
 

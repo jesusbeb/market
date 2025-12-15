@@ -1,8 +1,6 @@
 package com.jbeb.market.persistence.entity;
 
-import jakarta.persistence.EmbeddedId;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 
 // La llave primaria de la tabla en la BD, que representa este Entity esta compuesta por dos columnas: id_compra y id_producto
 // para esto se crea otra clase (ComprasProductoPK) que contenga esas dos columnas y despues se agrega a esta clase
@@ -19,6 +17,14 @@ public class ComprasProducto {
     private Double total;
 
     private Boolean estado;
+
+    @ManyToOne
+    @JoinColumn(name = "id_compra", insertable = false, updatable = false)
+    private Compra compra;
+
+    @ManyToOne
+    @JoinColumn(name = "id_producto", insertable = false, updatable = false)
+    private Producto producto;
 
     // Getters & Setters
 
