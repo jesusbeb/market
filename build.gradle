@@ -24,6 +24,10 @@ dependencies {
     // runtimeOnly porque solo se usara en tiempo de ejecucion. No se especifica la version, ya que gradle lo hara automaticamente
     runtimeOnly 'org.postgresql:postgresql'
 
+    // MapStruct
+    implementation 'org.mapstruct:mapstruct:1.6.3'
+    annotationProcessor 'org.mapstruct:mapstruct-processor:1.6.3'
+
 	implementation 'org.springframework.boot:spring-boot-starter-webmvc'
 	testImplementation 'org.springframework.boot:spring-boot-starter-webmvc-test'
 	testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
