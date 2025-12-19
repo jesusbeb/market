@@ -2,7 +2,7 @@ package com.jbeb.market.domain;
 
 // No incluimos el atributo barcode (codigoBarras) que si esta en Producto
 public class Product {
-    private int productId;
+    private Integer productId;
     private String name;
     private int categoryId;
     private double price;
@@ -12,11 +12,11 @@ public class Product {
 
     // Getters & Setters
 
-    public int getProductId() {
+    public Integer getProductId() {
         return productId;
     }
 
-    public void setProductId(int productId) {
+    public void setProductId(Integer productId) {
         this.productId = productId;
     }
 
