@@ -19,6 +19,7 @@ public class ComprasProducto {
     private Boolean estado;
 
     @ManyToOne
+    @MapsId("idCompra") // Nombre de la clave primaria que se enlazara
     @JoinColumn(name = "id_compra", insertable = false, updatable = false)
     private Compra compra;
 

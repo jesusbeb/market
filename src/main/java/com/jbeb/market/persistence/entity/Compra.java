@@ -33,7 +33,7 @@ public class Compra {
     private Cliente cliente;
 
     // List tiene los Productos de una Compra
-    @OneToMany(mappedBy = "compra")
+    @OneToMany(mappedBy = "compra", cascade = {CascadeType.ALL})
     private List<ComprasProducto> productos;
 
     // Getters & Setters
