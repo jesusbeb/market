@@ -1,0 +1,39 @@
+{
+  "clientId": "4546221",
+  "date": "2004-08-10T17:30:00",
+  "paymentMethod": "T",
+  "comment": "",
+  "state": "P",
+  "items": [
+    {
+      "productId": 1,
+      "quantity": 10,
+      "total": 3000.0,
+      "active": true
+    },
+    {
+      "productId": 24,
+      "quantity": 1,
+      "total": 4000.0,
+      "active": true
+    },
+    {
+      "productId": 27,
+      "quantity": 1,
+      "total": 9000.0,
+      "active": true
+    },
+    {
+      "productId": 36,
+      "quantity": 1,
+      "total": 40000.0,
+      "active": true
+    },
+    {
+      "productId": 49,
+      "quantity": 2,
+      "total": 16400.0,
+      "active": true
+    }
+  ]
+}

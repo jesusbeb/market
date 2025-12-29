@@ -5,7 +5,7 @@ import java.util.List;
 
 // Clase de compra orientada al dominio
 public class Purchase {
-    private int purchaseId;
+    private Integer purchaseId;
     private String clientId;
     private LocalDateTime date;
     private String paymentMethod;
@@ -15,11 +15,11 @@ public class Purchase {
 
     // Getters & Setters
 
-    public int getPurchaseId() {
+    public Integer getPurchaseId() {
         return purchaseId;
     }
 
-    public void setPurchaseId(int purchaseId) {
+    public void setPurchaseId(Integer purchaseId) {
         this.purchaseId = purchaseId;
     }
 
