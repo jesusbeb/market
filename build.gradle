@@ -21,6 +21,10 @@ repositories {
 dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
 
+    // Dependencia para crear la documentacion automaticamente en:
+    // http://localhost:8090/market/api/swagger-ui/index.html
+    implementation 'org.springdoc:springdoc-openapi-starter-webmvc-ui:2.5.0'
+
     // runtimeOnly porque solo se usara en tiempo de ejecucion. No se especifica la version, ya que gradle lo hara automaticamente
     runtimeOnly 'org.postgresql:postgresql'
 
